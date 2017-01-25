@@ -1,4 +1,4 @@
-function Queue() {
+function Stack() {
 
     var data = [];
 
