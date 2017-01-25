@@ -1,12 +1,12 @@
 describe('Testing Stacks', function() {
     it('Starts as an empty list', function() {
-        var names = new Stacks();
+        var names = new Stack();
 
         expect(0).toBe(names.length());
     });
 
     it('Can add elements to the list', function() {
-        var names = new Stacks();
+        var names = new Stack();
 
         names.add('Bobby');
 
@@ -14,7 +14,7 @@ describe('Testing Stacks', function() {
     });
 
     it('Allows multiple items to be added', function() {
-        var names = new Stacks();
+        var names = new Stack();
 
         names.add('Bobby');
         names.add('Andrew');
@@ -23,7 +23,7 @@ describe('Testing Stacks', function() {
     });
 
     it('Removes the correct element', function() {
-        var names = new Stacks();
+        var names = new Stack();
 
         names.add('Bobby');
         names.add('Andrew');
@@ -32,7 +32,7 @@ describe('Testing Stacks', function() {
     });
 
     it('Returns undefined if there are no more elements', function() {
-        var names = new Stacks(); 
+        var names = new Stack(); 
 
         expect(names.remove()).toBe(undefined);
     });
