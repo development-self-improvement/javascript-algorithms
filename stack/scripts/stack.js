@@ -10,6 +10,10 @@ function Stack() {
         // Fill in
     };
 
+    var find = function(value) {
+
+    };
+
     var length = function() {
         // Fill in
     };
@@ -17,6 +21,7 @@ function Stack() {
     return {
         add: add,
         remove: remove,
-        length: length
+        length: length,
+        find: find
     };
 }
