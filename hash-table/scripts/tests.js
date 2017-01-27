@@ -40,4 +40,29 @@ describe('Testing Hash Tables', function() {
         expect(names.find('Bobby')).toBe('Sanderson');
         expect(names.length()).toBe(2);
     });
+
+    it('Finds an element that exists', function() {
+        var names = new HashTable();
+
+        names.add('Bobby', 'Tables');
+        names.add('Andrew', 'Judd');
+
+        var result = names.find('Andrew');
+
+        expect(result.value).toBe('Judd');
+        expect(result.comparisons).toBe(1);
+
+    });
+
+    it('Finds undefined if the item is not found', function() {
+        var names = new HashTable();
+
+        names.add('Bobby', 'Tables');
+        names.add('Andrew', 'Judd');
+
+        var result = names.find('Suzy');
+
+        expect(result.value).toBe(undefined);
+        expect(result.comparisons).toBe(1);
+    });
 });
